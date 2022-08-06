@@ -62,6 +62,10 @@ function opciones(capitulos) {
 
 let capituloActual = 0
 siguienteCap.addEventListener('click', () => {
+    siguienteCap.style.display = "none"
+
+    document.getElementById("divRespuesta").innerHTML = ``
+
     capituloActual++
     presentacionCapitulo(capitulos[capituloActual])
 
