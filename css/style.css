@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Uchen&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: none;
+}
+
+
+header {
+    background-color: black;
+    text-align: center;
+    padding: 1rem;
+}
+
+header  h1 {
+    font-family:'Uchen', serif;
+    color: white;
+    font-size:3rem;
+}
+
+/*----------------Contenido de pagina ----------------*/
+.main {
+    background-color: aqua;
+    border-radius: 20px;
+    margin: 1rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.conteiner {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+}
+
+#siguienteCap {
+    display: none;
+}
