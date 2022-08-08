@@ -1,5 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Uchen&display=swap');
 
+:root {
+    --fondoNegro:#161A1D;
+    --rojoClaro:#A4161A;
+    --rojoOscuro:#660708;
+    --rojoMasclaro:#E5383B;
+
+    --blanco:white;
+    --negro:black;
+}
+
+body {
+    background-color: var(--fondoNegro);
+}
+
 *{
     margin:0;
     padding: 0;
@@ -15,13 +29,15 @@ header {
 
 header  h1 {
     font-family:'Uchen', serif;
-    color: white;
+    color: var(--rojoMasclaro);
     font-size:3rem;
+    text-transform: uppercase;
 }
 
 /*----------------Contenido de pagina ----------------*/
 .main {
-    background-color: aqua;
+    background-color:var(--negro);
+    color: var(--blanco);
     border-radius: 20px;
     margin: 1rem;
     padding: 1rem;
@@ -42,4 +58,20 @@ header  h1 {
 
 #siguienteCap {
     display: none;
+}
+
+.boton {
+    background-color: transparent;
+    color: var(--blanco);
+    padding: 1rem;
+    margin: 1rem;
+    border: 1px solid var(--rojoMasclaro);
+    border-radius: 2rem;
+    text-transform: uppercase;
+    font-family:'Uchen', serif;
+}
+
+.boton:hover {
+    background-color:var(--rojoMasclaro);
+    box-shadow:0 1px 2rem var(--rojoMasclaro);
 }
