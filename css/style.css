@@ -75,3 +75,35 @@ header  h1 {
     background-color:var(--rojoMasclaro);
     box-shadow:0 1px 2rem var(--rojoMasclaro);
 }
+
+.bordeRojo {
+    background-color: transparent;
+    color: var(--blanco);
+    padding: 1rem;
+    margin: 1rem;
+    border: 1px solid var(--rojoMasclaro); 
+    border-radius: 2rem;
+    font-family:'Uchen', serif;
+   /* box-shadow:0 1px 1rem var(--rojoMasclaro);*/
+    text-align: center;
+
+}
+
+img {
+    width: 50%;
+}
+
+#bienvenidoUser {
+    color: white;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+}
+
+input {
+    padding: 1rem;
+    border-radius: 2rem;
+    border: none;
+    font-size: 1rem;
+}
