@@ -10,7 +10,7 @@ class Capitulo {
     }
 }
 
-//------- variables (objetos y arrays)-------------
+//----------variables (objetos y arrays)-------------
 
 const capituloUno = new Capitulo ("Kiki es una chica de 19 años un tanto rara, no tiene amigos y le gusta pasar tiempo en su cuarto a solas", "Kiki decidio escuchar música acostada en su cama","../img/cap1part1.jpg","Ella es muy indecisa lo cual debes ayudarla a escoger una canción 1)Cancion Uno 2)Cancion Dos  3)Cancion Tres",2 ,['"¡¡¡NO ME GUSTA ESTA CANCIÓN!!!"', '"Me gusta esta canción"',`"¿Podes elegir mejor? Por favor te lo pido."`])
 
@@ -51,10 +51,36 @@ siguienteCap.addEventListener('click', () => {
 
         presentacionCapitulo(capitulos[capituloActual])
 
-    }
-    
+    }    
 })
 
+//-----------BIENVENIDO USER--------------
+
+const arrayNick = []
+
+const bienvenidoUser = document.getElementById("bienvenidoUser")
+
+const bienvenidoForm = document.getElementById("bienvenidoForm")
+
+bienvenidoForm.addEventListener("submit", (e) => {
+    e.preventDefault()
+
+    let username = document.getElementById("bienvenidoInput").value
+
+    const nickUno = {username}
+
+    arrayNick.push(nickUno)
+
+    localStorage.setItem('jugadores', JSON.stringify(nickUno))
+    
+    let nombreJugador = JSON.parse(localStorage.getItem('jugadores'))
+    
+    bienvenidoUser.innerHTML = `
+        <h2> Bienvenido ${nombreJugador.username} </h2>
+    `
+    Swal.fire(`Bienvenido ${nombreJugador.username}. Vas a tener que ayudar a Kiki a escoger una de las tres opciones que aparezcan dependiendo la situación. Solo puedes ingresar 1, 2 y 3. Ten cuidado con tu decisión.`)
+
+})
 
 //-----------PROGRAMA PRINCIPAL-----------
 
@@ -82,31 +108,4 @@ formulario.addEventListener("submit", (e) => {
 
 presentacionCapitulo(capitulos[capituloActual])
 
-//-----------BIENVENIDO USER--------------
-
-const arrayNick = []
-
-const bienvenidoUser = document.getElementById("bienvenidoUser")
-
-const bienvenidoForm = document.getElementById("bienvenidoForm")
-
-
-bienvenidoForm.addEventListener("submit", (e) => {
-    e.preventDefault()
-
-    let username = document.getElementById("bienvenidoInput").value
-
-    const nickUno = {username}
-
-    arrayNick.push(nickUno)
-
-    localStorage.setItem('jugadores', JSON.stringify(nickUno))
-    
-    let nombreJugador = JSON.parse(localStorage.getItem('jugadores'))
-    
-    bienvenidoUser.innerHTML = `
-        <h2> Bienvenido ${nombreJugador.username} </h2>
-    `
-    
-})
 
