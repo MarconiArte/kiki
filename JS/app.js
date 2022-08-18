@@ -12,11 +12,11 @@ class Capitulo {
 
 //----------variables (objetos y arrays)-------------
 
-const capituloUno = new Capitulo ("Kiki es una chica de 19 años un tanto rara, no tiene amigos y le gusta pasar tiempo en su cuarto a solas", "Kiki decidio escuchar música acostada en su cama","../img/cap1part1.jpg","Ella es muy indecisa lo cual debes ayudarla a escoger una canción 1)Cancion Uno 2)Cancion Dos  3)Cancion Tres",2 ,['"¡¡¡NO ME GUSTA ESTA CANCIÓN!!!"', '"Me gusta esta canción"',`"¿Podes elegir mejor? Por favor te lo pido."`])
+const capituloUno = new Capitulo ("Kiki es una chica de 19 años un tanto rara, no tiene amigos y le gusta pasar tiempo en su cuarto a solas", "Kiki decidio escuchar música acostada en su cama","./img/cap1part1.jpg","Ella es muy indecisa lo cual debes ayudarla a escoger una canción 1)Cancion Uno 2)Cancion Dos  3)Cancion Tres",2 ,['"¡¡¡NO ME GUSTA ESTA CANCIÓN!!!"', '"Me gusta esta canción"',`"¿Podes elegir mejor? Por favor te lo pido."`])
 
-const capituloDos = new Capitulo ('CAPITULO DOS',"Kiki recuerda que es hora de tomar su medicacíon pero olvido cual era...",'../img/cap1part1.jpg','Tiene tres tipos de pastillas la cual ella identifica por colores 1)Roja 2)Azul 3)Verde',3 ,['"La roja la tome esta mañana"', '"Azul... creo que es para dormir"','"Mmmmm...tomare la verde, supongo que es esta"'])
+const capituloDos = new Capitulo ('CAPITULO DOS',"Kiki recuerda que es hora de tomar su medicacíon pero olvido cual era...",'./img/cap1part1.jpg','Tiene tres tipos de pastillas la cual ella identifica por colores 1)Roja 2)Azul 3)Verde',3 ,['"La roja la tome esta mañana"', '"Azul... creo que es para dormir"','"Mmmmm...tomare la verde, supongo que es esta"'])
 
-const capituloTres = new Capitulo ('CAPITULO TRES',"Kiki tiene que ir a la cocina por un poco de agua para tomar su medicación. Al llegar a la cocina se percata de que algo la esta mirando",'../img/cap1part1.jpg','Al voltear y ver quien la observa se encuentra con una criatura humanoide llena de bocas con dientes filosos Entre susto y desesperacion busca algun objeto para defenderse 1)Un palo para amasar que uso la madre 2)Un cuchillo 3)Una sarten sobre la mesada',1 ,['"Kiki agarra el palo de amasar, golpea a la criatura y corre"', '"Kiki agarra el cuchillo se lanza hacia la criatura pero esta esquiva su ataque y le perfora el estomago con su brazo"','"Kiki agarra la sarten pero le parecia muy pesada para manipular y la criatura se le tira encima matandola"'])
+const capituloTres = new Capitulo ('CAPITULO TRES',"Kiki tiene que ir a la cocina por un poco de agua para tomar su medicación. Al llegar a la cocina se percata de que algo la esta mirando",'./img/cap1part1.jpg','Al voltear y ver quien la observa se encuentra con una criatura humanoide llena de bocas con dientes filosos Entre susto y desesperacion busca algun objeto para defenderse 1)Un palo para amasar que uso la madre 2)Un cuchillo 3)Una sarten sobre la mesada',1 ,['"Kiki agarra el palo de amasar, golpea a la criatura y corre"', '"Kiki agarra el cuchillo se lanza hacia la criatura pero esta esquiva su ataque y le perfora el estomago con su brazo"','"Kiki agarra la sarten pero le parecia muy pesada para manipular y la criatura se le tira encima matandola"'])
 
 const capitulos = [capituloUno, capituloDos, capituloTres]
 
@@ -60,27 +60,42 @@ const arrayNick = []
 
 const bienvenidoUser = document.getElementById("bienvenidoUser")
 
-const bienvenidoForm = document.getElementById("bienvenidoForm")
-
-bienvenidoForm.addEventListener("submit", (e) => {
-    e.preventDefault()
-
-    let username = document.getElementById("bienvenidoInput").value
-
-    const nickUno = {username}
-
-    arrayNick.push(nickUno)
-
-    localStorage.setItem('jugadores', JSON.stringify(nickUno))
-    
+if (localStorage.getItem('jugadores')) {
     let nombreJugador = JSON.parse(localStorage.getItem('jugadores'))
     
     bienvenidoUser.innerHTML = `
         <h2> Bienvenido ${nombreJugador.username} </h2>
     `
-    Swal.fire(`Bienvenido ${nombreJugador.username}. Vas a tener que ayudar a Kiki a escoger una de las tres opciones que aparezcan dependiendo la situación. Solo puedes ingresar 1, 2 y 3. Ten cuidado con tu decisión.`)
+} else {
+    const bienvenidoForm = document.getElementById("bienvenidoForm")
+    bienvenidoForm.addEventListener("submit", (e) => {
+        e.preventDefault()
+    
+        let username = document.getElementById("bienvenidoInput").value
+    
+        const nickUno = {username}
+    
+        arrayNick.push(nickUno)
+    
+        localStorage.setItem('jugadores', JSON.stringify(nickUno))
+        
+        let nombreJugador = JSON.parse(localStorage.getItem('jugadores'))
+        
+        bienvenidoUser.innerHTML = `
+            <h2> Bienvenido ${nombreJugador.username} </h2>
+        `
+        Swal.fire(`Bienvenido ${nombreJugador.username}. Vas a tener que ayudar a Kiki a escoger una de las tres opciones que aparezcan dependiendo la situación. Solo puedes ingresar 1, 2 y 3. Ten cuidado con tu decisión.`)
+    
+    })
+}
 
-})
+
+
+
+
+
+
+
 
 //-----------PROGRAMA PRINCIPAL-----------
 
