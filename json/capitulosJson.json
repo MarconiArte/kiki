@@ -1,0 +1,35 @@
+[
+    {
+        "titulo":"Kiki es una chica de 19 años un tanto rara, no tiene amigos y le gusta pasar tiempo en su cuarto a solas",
+        "resumen":"Kiki decidio escuchar música acostada en su cama",
+        "imagen":"./img/cap1part1.jpg",  
+        "pregunta":"Ella es muy indecisa lo cual debes ayudarla a escoger una canción 1)CancionUno 2)Cancion Dos  3)Cancion Tres",
+        "correcta":2, 
+        "respuesta1":"¡¡¡NO ME GUSTA ESTA CANCIÓN!!!",
+        "respuesta2":"Me gusta esta canción",
+        "respuesta3":"¿Podes elegir mejor? Por favor te lo pido."
+    },
+
+    {
+        "titulo":"CAPITULO DOS",
+        "resumen":"Kiki recuerda que es hora de tomar su medicacíon pero olvido cual era...",
+        "imagen":"./img/cap1part1.jpg",
+        "pregunta":"Tiene tres tipos de pastillas la cual ella identifica por colores 1)Roja 2)Azul 3)Verde",
+        "correcta":3,
+        "respuesta":"La roja la tome esta mañana",
+        "respuesta2":"Azul... creo que es para dormir",
+        "respuesta3":"Mmmmm...tomare la verde, supongo que es esta"
+    },
+
+    
+    {
+        "titulo":"CAPITULO TRES",
+        "resumen":"Kiki tiene que ir a la cocina por un poco de agua para tomar su medicación. Al llegar a la cocina se percata de que algo la esta mirando",
+        "imagen":"./img/cap1part1.jpg",
+        "pregunta":"Al voltear y ver quien la observa se encuentra con una criatura humanoide llena de bocas con dientes filosos Entre susto y desesperacion busca algun objeto para defenderse 1)Un palo para amasar que uso la madre 2)Un cuchillo 3)Una sarten sobre la mesada",
+        "correcta":1,
+        "respuesta":"Kiki agarra el palo de amasar, golpea a la criatura y corre",
+        "respuesta2":"Kiki agarra el cuchillo se lanza hacia la criatura pero esta esquiva su ataque y le perfora el estomago con su brazo",
+        "respuesta3":"Kiki agarra la sarten pero le parecia muy pesada para manipular y la criatura se le tira encima matandola"
+    }
+]

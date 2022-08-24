@@ -90,13 +90,6 @@ if (localStorage.getItem('jugadores')) {
 }
 
 
-
-
-
-
-
-
-
 //-----------PROGRAMA PRINCIPAL-----------
 
 const formulario = document.getElementById("form3")
@@ -124,3 +117,11 @@ formulario.addEventListener("submit", (e) => {
 presentacionCapitulo(capitulos[capituloActual])
 
 
+//--------JSON y FECTH--------------
+fetch("./json/capitulosJson.json")
+
+.then(response => response.json())
+
+.then(capitulosJson => {
+    console.log(capitulosJson)
+})
