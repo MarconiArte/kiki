@@ -5,9 +5,7 @@
         "imagen":"./img/cap1part1.jpg",  
         "pregunta":"Ella es muy indecisa lo cual debes ayudarla a escoger una canción 1)CancionUno 2)Cancion Dos  3)Cancion Tres",
         "correcta":2, 
-        "respuesta1":"¡¡¡NO ME GUSTA ESTA CANCIÓN!!!",
-        "respuesta2":"Me gusta esta canción",
-        "respuesta3":"¿Podes elegir mejor? Por favor te lo pido."
+        "respuesta":["¡¡¡NO ME GUSTA ESTA CANCIÓN!!!","Me gusta esta canción","¿Podes elegir mejor? Por favor te lo pido."]  
     },
 
     {
@@ -16,9 +14,7 @@
         "imagen":"./img/cap1part1.jpg",
         "pregunta":"Tiene tres tipos de pastillas la cual ella identifica por colores 1)Roja 2)Azul 3)Verde",
         "correcta":3,
-        "respuesta":"La roja la tome esta mañana",
-        "respuesta2":"Azul... creo que es para dormir",
-        "respuesta3":"Mmmmm...tomare la verde, supongo que es esta"
+        "respuesta":["La roja la tome esta mañana","Azul... creo que es para dormir","Mmmmm...tomare la verde, supongo que es esta"]
     },
 
     
@@ -28,8 +24,22 @@
         "imagen":"./img/cap1part1.jpg",
         "pregunta":"Al voltear y ver quien la observa se encuentra con una criatura humanoide llena de bocas con dientes filosos Entre susto y desesperacion busca algun objeto para defenderse 1)Un palo para amasar que uso la madre 2)Un cuchillo 3)Una sarten sobre la mesada",
         "correcta":1,
-        "respuesta":"Kiki agarra el palo de amasar, golpea a la criatura y corre",
-        "respuesta2":"Kiki agarra el cuchillo se lanza hacia la criatura pero esta esquiva su ataque y le perfora el estomago con su brazo",
-        "respuesta3":"Kiki agarra la sarten pero le parecia muy pesada para manipular y la criatura se le tira encima matandola"
+        "respuesta":["Kiki agarra el palo de amasar, golpea a la criatura y corre","Kiki agarra el cuchillo se lanza hacia la criatura pero esta esquiva su ataque y le perfora el estomago con su brazo","Kiki agarra la sarten pero le parecia muy pesada para manipular y la criatura se le tira encima matandola"]
+    },
+    {
+        "titulo":"CAPITULO CUATRO",
+        "resumen":"RESUMEN CAP 4",
+        "imagen":"IMAGEN CAP 4",
+        "pregunta":"PREGUNTA CAP 4",
+        "correcta":3,
+        "respuesta":["OPCION 1","OPCION2","OPCION3"]
+    },
+    {
+        "titulo":"CAPITULO CINCO",
+        "resumen":"RESUMEN CAP 5",
+        "imagen":"IMAGEN CAP 5",
+        "pregunta":"PREGUNTA CAP 5",
+        "correcta":0,
+        "respuesta":["FINAL MALO","FINAL BUENO","FINAL MALISIMO"]
     }
 ]
